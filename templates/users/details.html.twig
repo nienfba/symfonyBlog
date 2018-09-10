@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des utilisateurs{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="card border-secondary mb-3" style="max-width: 20rem;">
+        <div class="card-header">Détails</div>
+        <div class="card-body">
+            <h4 class="card-title">Informations de l'utilisateur</h4>
+            <p class="card-text"><strong>Prénom : </strong>{{ user.prenom}}<br />
+            <strong>Nom : </strong>{{ user.nom}}<br />
+            <strong>Email : </strong>{{ user.email}}<br />
+            <strong>Date création : </strong>{{ user.dateCreate | date('d/m/Y')}}<br />
+            <strong>Date dernière connexion : </strong>{{ user.dateLastLogin | date('d/m/Y')}}
+            </p>
+        </div>
+    </div>    
+</div>    
+            
+{% endblock %}
